@@ -1,0 +1,22 @@
+{% extends "learning_logs/base.html" %}
+
+{% block page_header %}
+  <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-3">
+    <h1 class="h2">Topics</h1>
+    <a class="btn btn-primary" href="{% url 'learning_logs:new_topic' %}">Add a new topic</a>
+  </div>
+{% endblock page_header %}
+
+{% block content %}
+  {% if topics %}
+    <ul class="list-group">
+      {% for topic in topics %}
+        <li class="list-group-item">
+          <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="text-muted">No topics have been added yet.</p>
+  {% endif %}
+{% endblock content %}
