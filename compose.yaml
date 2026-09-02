@@ -1,5 +1,6 @@
 services:
   web:
+    container_name: calambet_learning_logs
     build: .
     restart: unless-stopped
     env_file:
