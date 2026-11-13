@@ -37,4 +37,4 @@ docker compose up -d --build
 docker compose exec web python manage.py createsuperuser
 ```
 
-Production URL: `https://log.learning-logs.int.yt`
+Production URL: `https://log.trans-platform.com`
